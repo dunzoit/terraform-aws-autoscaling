@@ -64,6 +64,10 @@ resource "aws_autoscaling_group" "this" {
   lifecycle {
     create_before_destroy = true
   }
+
+   timeouts {
+    delete = "30m"
+  }
 }
 
 ################################################
